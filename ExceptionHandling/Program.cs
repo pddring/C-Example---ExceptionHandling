@@ -10,6 +10,27 @@ namespace ExceptionHandling
     {
         static void Main(string[] args)
         {
+            int age = -1;
+            bool valid = false;
+            while(!valid) {
+                Console.Write("Please enter your age: ");
+
+                try
+                {
+                    age = int.Parse(Console.ReadLine());
+                    if(age >= 0 && age <= 150)
+                    {
+                        valid = true;
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("You didn't enter your age");
+                }
+
+            }
+            Console.WriteLine("You are " + age + " years old");
+
             /*
              * Challenges:
              * 1a) Create a program which asks the user to type their age.
